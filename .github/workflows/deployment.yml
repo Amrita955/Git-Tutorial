@@ -11,7 +11,7 @@ jobs:
       - name: Install Depandancies
         run: npm ci
       - name: Lint Check
-        run: npm run Lint
+        run: npm run lint
   Test:
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +35,7 @@ jobs:
       - name: Run Test Cases
         run: npm test
       - name: Build code
-        run: npm run Build
+        run: npm run build
       - name: Deploy
         run: echo "Deployed"
 
