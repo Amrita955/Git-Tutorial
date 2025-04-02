@@ -1,9 +1,7 @@
 name: Issue Event Logger
-
 on:
   issues:
     types: [opened, edited, closed, reopened]
-
 jobs:
   log-issue-event:
     runs-on: ubuntu-latest
