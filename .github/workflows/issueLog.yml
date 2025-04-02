@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Issue Event Details
-        run: echo "📝 Issue Event: ${{ github.event.action }}"
+        env:
+          ISSUE_ACTION: ${{ github.event.action }}
+        run: echo "📝 Issue Event: $ISSUE_ACTION"
