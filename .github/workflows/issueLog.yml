@@ -7,12 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print issue Event Detail
-        run: echo "📝 Issue Event: ${{ github.event.action }}"
+        run: |
+          echo "📝 Issue Event: ${{ github.event.action }}"
           echo "📌 Issue Number: ${{ github.event.issue.number }}"
           echo "🆔 Issue ID: ${{ github.event.issue.id }}"
           echo "✍️ Issue Title: ${{ github.event.issue.title }}"
           echo "📝 Issue Body: ${{ github.event.issue.body }}"
           echo "👤 Issue Author: ${{ github.event.issue.user.login }}"
           echo "🔗 Issue URL: ${{ github.event.issue.html_url }}"
-
+         
 
