@@ -1,12 +1,14 @@
-name: Issue Event Logging
+name: Issue Event Logger
+
 on:
   issues:
-    types: [created, opened, edited, deleted]
-jobs: 
-  logging-issue-Event:
+    types: [opened, edited, closed, reopened]
+
+jobs:
+  log-issue-event:
     runs-on: ubuntu-latest
     steps:
-      - name: Print issue Event Detail
+      - name: Print Issue Event Details
         run: |
           echo "📝 Issue Event: ${{ github.event.action }}"
           echo "📌 Issue Number: ${{ github.event.issue.number }}"
@@ -15,5 +17,3 @@ jobs:
           echo "📝 Issue Body: ${{ github.event.issue.body }}"
           echo "👤 Issue Author: ${{ github.event.issue.user.login }}"
           echo "🔗 Issue URL: ${{ github.event.issue.html_url }}"
-         
-
